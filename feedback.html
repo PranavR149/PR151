@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Feedback form</title>
+	</head>
+			<style>
+	body,html {
+	background-image:url("down4.jpg");
+	background-size:cover;
+	}
+	</style>
+	<body>
+	<center>
+	<font face="cooper" color="Black"><h1><b><u>Tell us how did you feel...</u></b></h1></font>
+	<table>
+	<form action="feedback.php" method="post">
+	<table>
+		<tr>
+			<td>ID number:</td>
+			<td><input type="text" name="id" autocomplete="off" required></td>
+		</tr>
+		<tr>
+			<td>Enter Bid:</td>
+			<td><input type="number" name="bid" required></td>
+		</tr>
+		<tr>
+			<td>Feedback:</td>
+			<td><input type="radio" name="fb" value="Not Satisfied:-(" required>Not Satisfied:-(</td></tr>
+			<tr>
+			<td></td>
+			<td><input type="radio" name="fb" value="It was Good" required>It was Good</td></tr>
+			<tr>
+			<td></td>
+			<td><input type="radio" name="fb" value="Amazing:-)" required>Amazing:-)</td></tr>
+		</tr>
+		<tr>
+			<td>Suggession:</td>
+			<td><input type="text" name="suggession" autocomplete="off"></td>
+		</tr>
+		<tr>
+			<td><center><input type="submit" name="submit3" value="Save"></center></td>
+			<td><b><center><a href="Pg1.html">Back to home page</a></center></b></td>
+		</tr>	
+</form>
+</body>
+</html>

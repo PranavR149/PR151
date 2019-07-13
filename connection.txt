@@ -1,0 +1,53 @@
+<?php
+if(isset($POST['insert']))
+{
+	$hostname="localhost";
+	$username="root";
+	$password="";
+	$databaseName="vehiclerentalmanagement";
+	
+	$name=$_POST['name'];
+	$age=$_POST['age'];
+	
+	$connect=mysqli_connect($hostname,$username,$password,$databaseName);
+	
+	$query="Insert into 'hello'('name','age')values('$name','$age')";
+	
+	$result=mysqli_query($connect,$query);
+	
+	if($result)
+	{
+		echo "inserted";
+	}
+	else{
+		echo "not nserted";
+	}
+	
+	mysqli_close($connect);
+}
+?>
+<!DOCTYPE html>
+<html>
+<head>
+<title>php insert data</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+<body>
+<form ction="<?php $_PHP_SELF ?>" method="post">
+<h1>Customer Details</h1>
+	<table>
+		<tr>
+			<td>Name:</td>
+			<td><input type="text" name="name" required placeholder="name"></td>
+		</tr>
+		<tr>
+			<td>Age:</td>
+			<td><input type="number" name="age"  required placeholder="age"></td>
+		</tr>
+		<td><input type="submit" name="insert"  value="add data to database"></td>
+		<a href="index.php">Course</a>
+</form>
+</table>
+</body>
+</html>

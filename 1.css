@@ -1,0 +1,77 @@
+span.green
+{
+	font-family:arial;
+	color:green;
+}
+
+ol.upper-roman
+{
+	list-style-type:upper-roman;
+}
+
+ol.lower-alpha
+{
+	list-style-type:lower-alpha;
+}
+
+ol.decimal
+{
+	list-style-type:decimal;
+}
+
+table
+{
+	border-top-width:medium;
+	border-bottom-width:thick;
+	border-top-style:dotted;
+	border-bottom-style:dashed;
+	border-top-color:red;
+	border-bottom-color:yellow;
+}
+
+p.one
+{
+	margin:0.1in;
+	padding:0.1in;
+	background-color:yellow;
+}
+
+p.two
+{
+	margin:0.3in;
+	padding:0.1in;
+	background-color:red;
+	border-style:dashed;
+}
+
+p.three
+{
+	margin:0.3in;
+	background-color:grey;
+}
+
+p.four
+{
+	padding:0.3in;
+	background-color:orange;
+}
+
+p.five
+{
+	margin:0.4in;
+}
+
+th.red
+{
+	color:red;
+}
+
+th.green
+{
+	color:green;
+}
+
+th.blue
+{
+	color:blue;
+}

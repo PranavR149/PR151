@@ -1,0 +1,47 @@
+<?php
+$fname=$_POST['fname'];
+$lname=$_POST['lname'];
+$id=$_POST['id'];
+$address=$_POST['address'];
+$gender=$_POST['gender'];
+$age=$_POST['age'];
+$phone=$_POST['phone'];
+$email=$_POST['email'];
+
+if(!empty($fname) || !empty($lname) || !empty(id) || !empty(address) || !empty(gender) || !empty(age) || !empty(phone) || !empty(email)) {
+	$host="localhost";
+	$dbusername="root";
+	$dbpassword="";
+	$dbname="VehicleRentalManagement";
+
+	$conn=new mysqli($host,$dbusername,$dbpassword,$dbname);
+	if(mysqli_connect_error()) {
+		die('Connect Error('.mysqli_onnect_error().')'.mysqli_connect_error());
+	} else {
+		$select = "select email from customerdetails where email=? Limit 1";
+		$insert = "insert into customerdetails(fname,lname,id,address,gender,age,phone) values(?,?,?,?,?,?,?)";
+	
+		$stmt = $conn->prepare($select);
+		$stmt->bind_param("s",$email);
+		$stmt->execute();
+		$stmt->bind_result($email);
+		$stmt->store_result();
+		$rnum=$stmt->num_rows;
+
+		if($rnum==0) {
+			$stmt->close();
+			$stmt=$conn->prepare($insert);
+			$stmt->bind_param("hi",$fname,$lname,$id,$address,$gender,$age,$phone);
+			$stmt->execute();
+			echo "Successful";
+		} else {
+			echo "Already registered";
+			}
+		$stmt->close();
+		$conn->close();
+	}
+}else{
+	echo"All fields are required";
+	die();
+}
+?>

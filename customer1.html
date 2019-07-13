@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Vehicle form</title>
+	</head>
+		<style>
+	body,html {
+	background-image:url("down5.jpg");
+	background-size:cover;
+	}
+	</style>
+	<body>
+	<center>
+	<font face="cooper" color="Black"><h1><b><u>Customer Details</u></b></h1></font>
+	
+	<script>
+	function fun1()
+	{
+	var a=document.getElementById("mobno").value;
+		var b=document.getElementById("user").value;
+			var c=document.getElementById("user2").value;
+		
+		
+	
+	if(a==""){
+		document.getElementById("message").innerHTML="**Please enter mobile number";
+	return false;
+	}
+	if(isNaN(a)) {
+		document.getElementById("message").innerHTML="**Only numbers are allowed";
+	return false;
+	}
+	if(a.length<10) {
+		document.getElementById("message").innerHTML="**Mobile number must be 10 digits";
+	return false;
+	}
+	if(a.length>10) {
+		document.getElementById("message").innerHTML="**Mobile number must be 10 digits";
+	return false;
+	}
+	if((a.charAt(0)!=9)&& (a.charAt(0)!=8) && (a.charAt(0)!=7) && (a.charAt(0)!=6)) {
+		document.getElementById("message").innerHTML="**Invalid mobile number";
+	return false;
+	}
+	
+	if(b==""){
+		document.getElementById("message1").innerHTML="**Please enter first name";
+	return false;
+	}
+	if(!isNaN(b)) {
+		document.getElementById("message1").innerHTML="**Only characters are allowed";
+	return false;
+	}	
+	if((b.length<=2) || (b.length>20)) {
+		document.getElementById("message1").innerHTML="**First name must be of 2 to 20 characters";
+	return false;
+	}
+	
+	if(c==""){
+		document.getElementById("message2").innerHTML="**Please enter last name";
+	return false;
+	}
+	if(!isNaN(c)) {
+		document.getElementById("message2").innerHTML="**Only characters are allowed";
+	return false;
+	}	
+	if((c.length<=2) || (c.length>20)) {
+		document.getElementById("message2").innerHTML="**Last name must be of 2 to 20 characters";
+	return false;
+	}
+	}
+	</script>
+	
+	<table>
+	<form action="customer1.php" method="post" onsubmit="return fun1()">
+		<tr>
+			<td>First Name:</td>
+			<td><input type="text" name="fname" autocomplete="off" id="user"></td><span id="message1" style="color:red;"></span><br></br>
+		</tr>
+						
+		<tr>
+			<td>Last Name:</td>
+			<td><input type="text" name="lname"  autocomplete="off" id="user2"></td><span id="message2" style="color:red;"></span><br></br>
+		</tr>
+		<tr>
+			<td>ID number:</td>
+			<td><input type="text" name="id" autocomplete="off" required></td>
+		</tr>
+		<tr>
+			<td>Address:</td>
+			<td><input type="text" name="address" autocomplete="off" required></td>
+		</tr>
+		<tr>
+			<td>Gender:</td>
+			<td><input type="radio" name="gender" value="M" required>Male
+			<input type="radio" name="gender" value="F" required>Female</td>
+		</tr>
+		<tr>
+			<td>Date of Birth:</td>
+			<td><input type="date" name="dob" autocomplete="off" required></td>
+		</tr>
+		<tr>
+			<td>Phone:</td>
+			<td><input type="number" name="phone" value="" autocomplete="off" id="mobno" ></td><span id="message" style="color:red;"></span><br></br>
+		</tr>
+						
+		<tr>
+			<td>Email:</td>
+			<td><input type="text" name="email" value="" autocomplete="off" required></td>
+		</tr>
+		<tr>
+			<td><input type="submit" name="insert" value="Save" ></td>
+			<td><input type="submit" name="submit4" value="Update"></td>
+		</tr>
+		<tr>
+			<td><b><a href="booking1.html">Book Car</a></b></td>
+			<td><b><a href="booking11.html">Book Bike</a></b></td>
+			<td><b><a href="Pg1.html">Exit</a></b></td>
+		</tr>
+			<tr>
+			<h1><td>(Note:Please save and proceed)</td></h1>
+			</tr>
+		</tr>
+	</table>
+</form>
+</body>
+</html>

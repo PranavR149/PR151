@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Car</title>
+	</head>
+	<style>
+	body,html {
+	background-image:url("ford.jpg");
+	background-size:cover;
+	}
+	</style>
+	<body>
+	<h1 align="center"><font face="cooper" color="Red"><b><u>Welcome to Vehicle Rentals</u></b></font></h1>
+	<h1 align="center"><a href="customer1.php">Book a ride</font></a></h1>
+	<h1 align="center"><a href="vehicledetails.html">Check Vehicle Details And Availability</a></h1>
+		<h1 align="center"><a href="checkdetails.html">Check Booking Details</a></h1>
+			<h1 align="center"><a href="editdetails.html">Cancel booking</a></h1>
+			<h1 align="center"><a href="feedback.html">Feedback</a></h1>
+</body>
+</html>
+
+
